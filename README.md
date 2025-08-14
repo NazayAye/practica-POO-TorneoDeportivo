@@ -5,8 +5,7 @@
 **Listar equipos.**
 **Sortear semifinales (solo 4 equipos).**
 
-![alt text](image.png)
-
+![alt text](image-1.png)
 # Decisiones de diseño
 
 ## Encapsulamiento:
