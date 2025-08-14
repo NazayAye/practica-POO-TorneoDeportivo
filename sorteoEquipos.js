@@ -10,8 +10,8 @@ export class SorteoEquipos extends Evento {
   }
 
   ejecutarEvento() {
-    if (this.equipos.length !== 8) {
-      console.log("⚠️ Se necesitan exactamente 8 equipos para cuartos");
+    if (this.equipos.length !== 4) {
+      console.log("Se necesitan exactamente 4 equipos para cuartos");
       return;
     }
     this.enfrentamientos = [];
@@ -25,7 +25,7 @@ export class SorteoEquipos extends Evento {
       );
       this.enfrentamientos.push(p);
     }
-    console.log("🏆 Sorteo completado!");
+    console.log("Sorteo completado");
     this.mostrarEnfrentamientos();
   }
 

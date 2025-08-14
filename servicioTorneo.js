@@ -14,15 +14,15 @@ export class ServicioTorneo {
       return;
     }
     this.equipos.set(this.nextId, new Equipo(this.nextId, nombre));
-    console.log(`✅ Equipo agregado: ${nombre}`);
+    console.log(`Equipo agregado: ${nombre}`);
     this.nextId++;
   }
 
   eliminarEquipo(id) {
     if (this.equipos.delete(id)) {
-      console.log("✅ Equipo eliminado");
+      console.log("Equipo eliminado");
     } else {
-      console.log("⚠️ No existe equipo con ese ID");
+      console.log("No existe equipo con ese ID");
     }
   }
 
@@ -30,9 +30,9 @@ export class ServicioTorneo {
     const eq = this.equipos.get(id);
     if (eq && nuevoNombre && nuevoNombre.trim() !== "") {
       eq.setNombre(nuevoNombre);
-      console.log("✅ Equipo modificado");
+      console.log("Equipo modificado");
     } else {
-      console.log("⚠️ No se pudo modificar");
+      console.log("No se pudo modificar");
     }
   }
 

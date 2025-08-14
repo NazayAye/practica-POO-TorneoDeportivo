@@ -10,12 +10,12 @@ const rl = readline.createInterface({
 const servicio = new ServicioTorneo();
 
 function menu() {
-  console.log("\n=== Menú Torneo de Fútbol ===");
+  console.log("\n=== Torneo  ===");
   console.log("1. Agregar equipo");
   console.log("2. Eliminar equipo");
   console.log("3. Modificar equipo");
   console.log("4. Listar equipos");
-  console.log("5. Sortear cuartos");
+  console.log("5. Sortear semifinales");
   console.log("6. Salir");
 
   rl.question("Opción: ", (op) => {
@@ -49,11 +49,11 @@ function menu() {
         menu();
         break;
       case "6":
-        console.log("👋 Saliendo...");
+        console.log("Saliendo...");
         rl.close();
         break;
       default:
-        console.log("⚠️ Opción inválida");
+        console.log("Opción inválida");
         menu();
     }
   });
