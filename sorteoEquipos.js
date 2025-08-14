@@ -1,11 +1,10 @@
-// sorteoEquipos.js
 import { Evento } from "./evento.js";
 import { Partido } from "./partido.js";
 
 export class SorteoEquipos extends Evento {
   constructor(id, fecha, descripcion, equipos) {
     super(id, fecha, descripcion);
-    this.equipos = equipos; // Array de objetos Equipo
+    this.equipos = equipos; 
     this.enfrentamientos = [];
   }
 
@@ -15,7 +14,6 @@ export class SorteoEquipos extends Evento {
       return;
     }
     this.enfrentamientos = [];
-    // Mezclar aleatoriamente
     this.equipos.sort(() => Math.random() - 0.5);
     for (let i = 0; i < this.equipos.length; i += 2) {
       const p = new Partido(

@@ -1,4 +1,3 @@
-// evento.js
 export class Evento {
   constructor(id, fecha, descripcion) {
     this.id = id;

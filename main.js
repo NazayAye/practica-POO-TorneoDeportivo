@@ -10,13 +10,14 @@ const rl = readline.createInterface({
 const servicio = new ServicioTorneo();
 
 function menu() {
-  console.log("\n=== Torneo  ===");
+  console.log("\n=== Torneo ===");
   console.log("1. Agregar equipo");
   console.log("2. Eliminar equipo");
   console.log("3. Modificar equipo");
   console.log("4. Listar equipos");
   console.log("5. Sortear semifinales");
-  console.log("6. Salir");
+  console.log("6. Sortear final");
+  console.log("7. Salir");
 
   rl.question("Opción: ", (op) => {
     switch (op.trim()) {
@@ -26,12 +27,14 @@ function menu() {
           menu();
         });
         break;
+
       case "2":
         rl.question("ID a eliminar: ", id => {
           servicio.eliminarEquipo(Number(id));
           menu();
         });
         break;
+
       case "3":
         rl.question("ID a modificar: ", id => {
           rl.question("Nuevo nombre: ", nombre => {
@@ -40,18 +43,27 @@ function menu() {
           });
         });
         break;
+
       case "4":
         servicio.listarEquipos();
         menu();
         break;
+
       case "5":
-        servicio.sortearCuartos();
+        servicio.sortearCuartos(); // Sorteo de semifinales
         menu();
         break;
+
       case "6":
+        servicio.sortearFinal(); // Sorteo de final
+        menu();
+        break;
+
+      case "7":
         console.log("Saliendo...");
         rl.close();
         break;
+
       default:
         console.log("Opción inválida");
         menu();
@@ -59,4 +71,5 @@ function menu() {
   });
 }
 
+// Inicia el programa
 menu();

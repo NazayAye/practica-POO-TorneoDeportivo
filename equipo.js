@@ -1,6 +1,5 @@
-// equipo.js
 export class Equipo {
-  #nombre; // Encapsulado
+  #nombre;
 
   constructor(id, nombre) {
     this.id = id;

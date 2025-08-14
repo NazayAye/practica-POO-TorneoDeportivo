@@ -12,7 +12,7 @@
 **#nombre** de Equipo es privado para proteger la información.*
 
 ## Polimorfismo:
-Eventoes clase base abstracta; SorteoEquiposimplementa ejecutarEvento().
+Eventoes clase base abstracta; SorteoEquipos implementa ejecutarEvento().
 
 ## Mapa para equipos:
 Permite acceso rápido por ID y manejo dinámico de los equipos.
